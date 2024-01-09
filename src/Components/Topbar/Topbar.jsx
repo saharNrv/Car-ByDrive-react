@@ -45,11 +45,11 @@ export default function Topbar() {
       </div>
      
       <div className='menu-humburger ' onClick={openMenu}>
-        <span className='menu-humburger-item'></span>
+        <span className='menu-humburger-item dark:bg-white dark:after:bg-white dark:before:bg-white'></span>
       </div>
       <div className='change-theme'>
 
-        <button className='w-[50px] h-[50px] flex items-center justify-center rounded-[50%] shadow shadow-gray-200'
+        <button className='theme-btn w-[50px] h-[50px] flex items-center justify-center rounded-[50%] shadow shadow-gray-200'
         onClick={toggleTheme}
         >
          {

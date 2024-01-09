@@ -19,7 +19,7 @@ export default function Header() {
         <div >
 
         <h1 className='headet-title text-[50px] font-black dark:text-white'>The easiest way to buy a car</h1>
-        <p className='text-center my-4 tracking-widest dark:text-slate-400'>Drive your dream car down the stylish streets</p>
+        <p className='header-desc text-center my-4 tracking-widest dark:text-slate-400'>Drive your dream car down the stylish streets</p>
         </div>
         <div className='header-searchBox'>
             <input type="text" placeholder='serach...' className='header-input' />
