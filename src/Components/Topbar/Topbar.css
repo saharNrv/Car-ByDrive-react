@@ -1,0 +1,32 @@
+.menu-humburger {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+.menu-humburger-item {
+  position: absolute;
+  width: 30px;
+  height: 4px;
+  border-radius: 20px;
+  background-color: #000;
+}
+.menu-humburger-item::after,
+.menu-humburger-item::before {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 4px;
+  background-color: #000;
+  border-radius: 20px;
+}
+
+.menu-humburger-item::after {
+  top: -10px;
+}
+.menu-humburger-item::before {
+  top: 10px;
+}
