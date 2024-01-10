@@ -3,6 +3,7 @@ import './Home'
 import Topbar from '../../Components/Topbar/Topbar';
 import Header from '../../Components/Header/Header';
 import Experiece from '../../Components/Experiece/Experiece';
+import Cars from '../../Components/Cars/Cars';
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
     <Topbar/>
     <Header/>
     <Experiece/>
+    <Cars/>
  
     </div>
   );

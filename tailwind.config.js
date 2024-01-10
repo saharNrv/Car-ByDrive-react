@@ -4,6 +4,9 @@ module.exports = {
   darkMode: 'class',
   theme: {
     extend: {
+      boxShadow:{
+        '3xl':'0px 0px 12px #f0f0f0'
+      }
       
     },
   },
