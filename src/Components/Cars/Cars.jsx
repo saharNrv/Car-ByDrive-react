@@ -4,7 +4,7 @@ import HeaderSection from '../HeaderSection/HeaderSection';
 
 export default function Cars() {
   return (
-    <div className='cars mt-[50px]'>
+    <div className='cars mt-[80px]'>
         <HeaderSection title={'Various luxury cars'}/>
         <div className="container-grid">
            <div className="row-grid">

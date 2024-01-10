@@ -28,7 +28,7 @@ export default function Topbar() {
       },[theme])
 
   return (
-    <div className='topbar bg-with dark:bg-slate-900 h-20 flex items-center justify-between px-10'>
+    <div className='topbar bg-with dark:bg-slate-900 w-full h-20 flex items-center justify-between px-10 fixed z-30 bg-[#fff] '>
  
       <div className="topbar-left">
         <img src="/image/logo-dark.png" alt="" className='w-[100px] dark:hidden' />

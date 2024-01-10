@@ -9,7 +9,7 @@ export default function Header() {
    
 
   return (
-    <div className='header '>
+    <div className='header pt-[80px]'>
       
       <img src="/image/car-bg-3-light.jpeg" alt=""  className='header-img dark:hidden'/>
       <img src="/image/car-bg-4-dark.jpg" alt=""  className='header-img hidden dark:block'/>
