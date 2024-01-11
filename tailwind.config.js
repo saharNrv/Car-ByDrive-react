@@ -5,7 +5,8 @@ module.exports = {
   theme: {
     extend: {
       boxShadow:{
-        '3xl':'0px 0px 12px #f0f0f0'
+        '3xl':'0px 0px 12px #f0f0f0',
+        '4xl':'0px 0px 12px rgba(0,0,0,0.5)'
       }
       
     },

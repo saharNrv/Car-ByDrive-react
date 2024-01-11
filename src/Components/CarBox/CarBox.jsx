@@ -3,8 +3,8 @@ import './CarBox.css'
 
 export default function CarBox() {
   return (
-    <div className='col-xl-4'>
-        <div className="carbox dark:shadow-3xl dark:border-none">
+    <div className='col-12 colxs-12 col-md-6 col-xl-4'>
+        <div className="carbox dark:shadow-3xl dark:border-none cursor-pointer shadow-4xl">
             <img src="/image/car-bg-1.jpeg" alt="" />
             <div className='flex items-center gap-5 my-4'>
                 <div className='brand-wrap'>
@@ -17,7 +17,7 @@ export default function CarBox() {
             </div>
            
             <div className='flex items-center justify-between px-4 py-4'>
-                <a href="#" className='bg-gray-200 py-2 px-4 rounded-md'>see more</a>
+                <a href="#" className='bg-gray-200 py-2 px-4 rounded-md hover:bg-gray-300'>see more</a>
                 <span className='dark:text-white text-2xl'>$350.000</span>
             </div>
         </div>
