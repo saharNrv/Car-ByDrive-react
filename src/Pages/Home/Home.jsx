@@ -5,6 +5,7 @@ import Header from '../../Components/Header/Header';
 import Experiece from '../../Components/Experiece/Experiece';
 import Cars from '../../Components/Cars/Cars';
 import AboutCar from '../../Components/AboutCar/AboutCar';
+import Footer from '../../Components/Footer/Footer';
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
     <Experiece/>
     <Cars/>
     <AboutCar/>
+    <Footer/>
  
 
  

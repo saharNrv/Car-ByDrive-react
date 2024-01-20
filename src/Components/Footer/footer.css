@@ -1,0 +1,19 @@
+.footer{
+
+    @apply mt-10 dark:bg-slate-900 bg-gray-200 p-10 dark:text-white
+}
+.footer-info{
+    @apply my-5 dark:text-white
+}
+.footer-social{
+    @apply flex gap-3 items-center text-2xl dark:text-white cursor-pointer
+}
+.footer-list{
+    @apply flex items-center justify-center flex-col
+}
+.footer-menu{
+    @apply text-center mt-3
+}
+.footer-menu li{
+    @apply mt-4 cursor-pointer
+}
