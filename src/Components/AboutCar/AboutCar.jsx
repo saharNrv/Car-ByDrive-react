@@ -22,8 +22,8 @@ export default function AboutCar() {
                         </a>
                     </div>
                     <div className="col-12 col-xs-12 col-md-6 col-xl-5">
-                        <div className="row-grid">
-                            <div className='col-12 ml-4'>
+                        
+                            <div className=''>
                                 <a href="#">
                                     <div className=' h-[250px] m-2 relative rounded-md overflow-hidden'>
                                         <img src="/image/aboutcar-6.jpeg" alt="" className='w-[100%] h-full object-cover' />
@@ -37,7 +37,7 @@ export default function AboutCar() {
                                     </div>
                                 </a>
                             </div>
-                            <div className='col-12 ml-4'>
+                            <div className=''>
                             <a href="#">
                                 <div className=' h-[250px] m-2 relative rounded-md overflow-hidden'>
                                     <img src="/image/aboutcar-1.jpeg" alt="" className='w-[100%] h-full object-cover' />
@@ -50,7 +50,7 @@ export default function AboutCar() {
                                 </div>
                             </a>
                             </div>
-                        </div>
+                        
 
 
                     </div>
