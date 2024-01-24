@@ -4,6 +4,7 @@ import Topbar from '../../Components/Topbar/Topbar';
 import Footer from '../../Components/Footer/Footer';
 import { FaUser } from "react-icons/fa";
 import { FaLock } from "react-icons/fa";
+import Input from '../../Components/From/Input';
 
 export default function Login() {
   return (
@@ -21,11 +22,19 @@ export default function Login() {
                 <form >
                     <div className='input-wrap'>
                     <FaUser className='login-icon'/>
-                    <input type="text" placeholder='enter your username' />
+                    <Input
+                      element='input'
+                      type='text'
+                      placeholder='enter your username'
+                    />
                     </div>
                     <div className='input-wrap'>
                     <FaLock className='login-icon'/>
-                    <input type="text" placeholder='enter your username' />
+                    <Input
+                      element='input'
+                      type='text'
+                      placeholder='enter your username'
+                    />
                     </div>
                     <button className='login-btn'>login</button>
                 </form>

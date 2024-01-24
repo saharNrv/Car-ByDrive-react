@@ -3,7 +3,7 @@ import HeaderSection from '../HeaderSection/HeaderSection';
 
 export default function AboutCar() {
     return (
-        <div className='aboutcar mt-[100px]'>
+        <div className='aboutcar mt-[100px] mb-5'>
             <div className="container-grid">
                 <HeaderSection title={'More about world’s best cars'} />
 

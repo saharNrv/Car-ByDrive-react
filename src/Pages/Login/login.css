@@ -37,7 +37,7 @@
   @apply relative;
 }
 .input-wrap input {
-  @apply w-full p-4 outline-none rounded-lg dark:bg-gray-800;
+  @apply w-full p-4 outline-none rounded-lg dark:bg-gray-800 dark:text-white;
 }
 .login-icon {
   @apply absolute right-3 top-3 dark:text-white;
