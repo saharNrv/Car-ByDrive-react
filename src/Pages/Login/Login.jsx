@@ -27,7 +27,7 @@ export default function Login() {
                     <FaLock className='login-icon'/>
                     <input type="text" placeholder='enter your username' />
                     </div>
-                    <button>login</button>
+                    <button className='login-btn'>login</button>
                 </form>
                </div>
             </div>

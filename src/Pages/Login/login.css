@@ -16,19 +16,19 @@
   @apply dark:bg-gradient-to-b from-slate-900
 }
 .login-wrap {
-  @apply w-2/4 absolute bg-black/30 backdrop-blur-md flex items-center  flex-col p-4;
+  @apply md:w-2/4 absolute dark:bg-black/50 bg-gray-400/50 backdrop-blur-md flex items-center rounded-lg  flex-col p-4;
 }
 .login-header {
-  @apply text-center mb-5 mt-10;
+  @apply text-center mb-5 mt-10 ;
 }
 .login-header h2 {
-  @apply font-bold text-2xl;
+  @apply font-bold text-2xl text-red-500;
 }
 .login-header span {
   @apply font-bold text-gray-400;
 }
 .form-wrap {
-  @apply w-3/5;
+  @apply md:w-96
 }
 .form-wrap form {
   @apply flex flex-col gap-6;
@@ -37,8 +37,11 @@
   @apply relative;
 }
 .input-wrap input {
-  @apply w-full p-4 outline-none rounded-lg;
+  @apply w-full p-4 outline-none rounded-lg dark:bg-gray-800;
 }
 .login-icon {
-  @apply absolute right-3 top-3;
+  @apply absolute right-3 top-3 dark:text-white;
+}
+.login-btn{
+    @apply bg-white p-4 rounded-lg font-bold mb-10 dark:bg-gray-800 dark:text-white
 }
