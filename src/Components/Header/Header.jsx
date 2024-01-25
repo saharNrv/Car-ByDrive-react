@@ -1,12 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import './Header.css'
 import { IoSearch } from "react-icons/io5";
+import AutContext from '../../context/AuthContext';
 
 export default function Header() {
 
 
-
-   
 
   return (
     <div className='header pt-[80px]'>

@@ -6,6 +6,21 @@
       "email": "sahar@gmail.com",
       "password": "12121212",
       "id": 1
+    },
+    {
+      "name": "saeed nouri",
+      "username": "saeed_nb",
+      "email": "saeed@gmail.com",
+      "password": "123456789",
+      "id": 2
+    },
+    {
+      "name": "Ali yosefi",
+      "username": "ali_9090",
+      "email": "ali@gmail.com",
+      "password": "ali909090",
+      "userBasket": [],
+      "id": 3
     }
   ]
 }

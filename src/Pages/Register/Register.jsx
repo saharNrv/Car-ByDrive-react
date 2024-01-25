@@ -45,8 +45,9 @@ const registerNewUser=(event)=>{
     username:formState.inputs.username.value,
     email:formState.inputs.email.value,
     password:formState.inputs.password.value,
+    userBasket:[]
   }
-  console.log(newUserInfos);
+  
 
   fetch('http://localhost:3000/users',{
     method:"POST",
@@ -57,7 +58,7 @@ const registerNewUser=(event)=>{
   }).then(res=>res.json())
     .then(resualt=>{
       console.log(resualt);
-      authContext.login(resualt.name,resualt.id)
+      authContext.login(resualt.username,resualt.id)
     })
 
 }
