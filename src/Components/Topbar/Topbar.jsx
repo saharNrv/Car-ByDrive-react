@@ -28,28 +28,29 @@ export default function Topbar() {
       },[theme])
 
   return (
-    <div className='topbar bg-with dark:bg-slate-900 w-full h-20 flex items-center justify-between px-10 fixed z-30 bg-[#fff] '>
+    <div className='topbar'>
  
       <div className="topbar-left">
         <img src="/image/logo-dark.png" alt="" className='w-[100px] dark:hidden' />
         <img src="/image/logo-light.png" alt="" className='w-[100px] hidden dark:block' />
       </div>
       <div className="topbar-right  " ref={menuRef}>
-        <ul className='topbar-list flex items-center gap-10 *:cursor-pointer dark:text-white dark:bg-slate-900/[.6] dark:backdrop-blur-lg'>
+        <ul className='topbar-list'>
             <li>Home</li>
             <li>All Cars</li>
             <li>Contact Us</li>
             <li>Reviews</li>
+            <li className='md:hidden block'><a href="#" className='create-acount'>login/sign in</a></li>
         </ul>
 
       </div>
      
       <div className='menu-humburger ' onClick={openMenu}>
-        <span className='menu-humburger-item dark:bg-white dark:after:bg-white dark:before:bg-white'></span>
+        <span className='menu-humburger-item'></span>
       </div>
       <div className='change-theme'>
 
-        <button className='theme-btn w-[50px] h-[50px] flex items-center justify-center rounded-[50%] shadow shadow-gray-200'
+        <button className='theme-btn'
         onClick={toggleTheme}
         >
          {
@@ -61,7 +62,9 @@ export default function Topbar() {
             )
          }
         </button>
-       
+        <div className='md:block hidden dark:text-white font-bold'>
+        <a href="#" className='create-acount'>login/sign in</a>
+        </div>
 
       </div>
 

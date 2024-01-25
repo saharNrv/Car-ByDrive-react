@@ -1,5 +1,15 @@
-
-
+.topbar {
+  @apply bg-white dark:bg-slate-900 w-full h-20 flex items-center justify-between px-10 fixed z-30 bg-[#fff];
+}
+.topbar-list {
+  @apply flex items-center gap-10 *:cursor-pointer dark:text-white dark:bg-slate-900/[.6] dark:backdrop-blur-lg;
+}
+.create-acount{
+  border: 2px solid;
+  padding: 5px 10px;
+  border-radius: 3px;
+  
+}
 .menu-humburger {
   position: relative;
   width: 40px;
@@ -10,6 +20,7 @@
   display: none;
 }
 .menu-humburger-item {
+  @apply  dark:bg-white dark:after:bg-white dark:before:bg-white;
   position: absolute;
   width: 30px;
   height: 4px;
@@ -31,4 +42,10 @@
 }
 .menu-humburger-item::before {
   top: 10px;
+}
+.change-theme{
+  @apply flex items-center gap-3 flex-row-reverse
+}
+.theme-btn{
+  @apply w-[50px] h-[50px] flex items-center justify-center rounded-[50%] shadow shadow-gray-200
 }
