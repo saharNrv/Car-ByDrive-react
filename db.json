@@ -1,5 +1,11 @@
 {
-    "users":[
-        {"id":1,"name":"sahar nouri"}
-    ]
+  "users": [
+    {
+      "name": "sahar nouri",
+      "username": "sahar_nrv",
+      "email": "sahar@gmail.com",
+      "password": "12121212",
+      "id": 1
+    }
+  ]
 }

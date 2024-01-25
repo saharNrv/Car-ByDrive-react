@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './../../Style/log-register.css'
 import Topbar from '../../Components/Topbar/Topbar';
 import Footer from '../../Components/Footer/Footer';
@@ -10,12 +10,13 @@ import { MdEmail } from "react-icons/md";
 import Button from '../../Components/From/Button';
 import { requiredValidator,minValidator,maxValidator,emailValidator } from '../../Validators/Rules';
 import { useForm } from '../../Hooks/useForm';
+import AutContext from '../../context/AuthContext';
 
 
 export default function Register() {
+ const authContext=useContext(AutContext)
 
-
-  const[formState,onInputHandler]=useForm({
+  const[formState, onInputHandler]=useForm({
     name:{
       value:'',
       isValid:false
@@ -36,6 +37,30 @@ export default function Register() {
 
 
 console.log(formState);
+
+const registerNewUser=(event)=>{
+  event.preventDefault()
+  const newUserInfos={
+    name:formState.inputs.name.value,
+    username:formState.inputs.username.value,
+    email:formState.inputs.email.value,
+    password:formState.inputs.password.value,
+  }
+  console.log(newUserInfos);
+
+  fetch('http://localhost:3000/users',{
+    method:"POST",
+    headers:{
+      'Content-Type':'application/json'
+    },
+    body:JSON.stringify(newUserInfos)
+  }).then(res=>res.json())
+    .then(resualt=>{
+      console.log(resualt);
+      authContext.login(resualt.name,resualt.id)
+    })
+
+}
 
   return (
     <div>
@@ -83,6 +108,7 @@ console.log(formState);
                           maxValidator(20)
                         ]
                       }
+                      onInputHandler={onInputHandler}
                     />
                     </div>
                     <div className='input-wrap'>
@@ -99,6 +125,7 @@ console.log(formState);
                           emailValidator()
                         ]
                       }
+                      onInputHandler={onInputHandler}
                     />
                     </div>
                     <div className='input-wrap'>
@@ -106,7 +133,7 @@ console.log(formState);
                     <Input 
                       id='password'
                       element='input'
-                      type='text'
+                      type='password'
                       placeholder='enter your password'
                        validations={
                         [
@@ -115,9 +142,10 @@ console.log(formState);
                           maxValidator(16)
                         ]
                       }
+                      onInputHandler={onInputHandler}
                     />
                     </div>
-                    <Button type='submit' className='login-btn'>login</Button>
+                    <Button type='submit' className='login-btn' onClick={registerNewUser}>login</Button>
                 </form>
                 <div className='login-info'>
                   <p>Do you have an account already? <Link to='/login' className='log-link'>login</Link></p>
