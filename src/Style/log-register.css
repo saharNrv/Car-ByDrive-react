@@ -51,3 +51,10 @@
   .log-link{
    @apply underline text-blue-300
   }
+
+  .success-input{
+    border: 2px solid green;
+  }
+  .error-input{
+    border: 2px solid red;
+  }
