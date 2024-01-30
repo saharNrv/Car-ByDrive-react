@@ -1,0 +1,29 @@
+.specs-car{
+    height: 100vh;
+    padding-top: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @apply dark:bg-slate-900;
+}
+.car-img{
+    @apply w-full h-[487px] rounded-lg
+}
+.car-info{
+    @apply flex flex-col justify-center px-10 h-full
+}
+.car-info-title{
+    @apply text-3xl font-bold dark:text-white
+}
+.car-info-text{
+    @apply leading-6 my-5 text-gray-400
+}
+.car-pb{
+    @apply flex items-center justify-between 
+}
+.car-price{
+    @apply font-bold text-[20px] dark:text-gray-400
+}
+.car-btn{
+    @apply bg-blue-500 p-4 rounded-lg text-white dark:shadow-3xl
+}

@@ -32,7 +32,7 @@
       "name":"Hyundai",
       "price":43500000,
       "gear":"Automatic",
-      "img":"/image/car-1.jpeg",
+      "img":"/image/car-1.webp",
       "shortName":"hyundai",
       "info":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, architecto.Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, architecto."
     },
