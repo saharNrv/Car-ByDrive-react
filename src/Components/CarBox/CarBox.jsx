@@ -1,5 +1,6 @@
 import React from 'react';
 import './CarBox.css'
+import { Link } from 'react-router-dom';
 
 export default function CarBox(props) {
 
@@ -19,7 +20,7 @@ export default function CarBox(props) {
             </div>
            
             <div className='carbox-price-wrap flex items-center justify-between px-4 py-4'>
-                <a href="#" className='carbox-btn'>see more</a>
+                <Link to={`/cars/${props.shortName}`} className='carbox-btn'>see more</Link>
                 <span className='carbox-price'>${props.price.toLocaleString()}</span>
             </div>
         </div>

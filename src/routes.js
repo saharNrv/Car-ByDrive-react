@@ -5,7 +5,7 @@ import Register from "./Pages/Register/Register"
 
 const routers=[
     {path:'/',element:<Home/>},
-    {path:'/car/mercedes',element:<Car/>},
+    {path:'/cars/:shortName',element:<Car/>},
     {path:'/login',element:<Login/>},
     {path:'/register',element:<Register/>},
 
