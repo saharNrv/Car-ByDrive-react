@@ -19,7 +19,7 @@ const inputReducer=(state,action)=>{
 }
 
 export default function Input(props) {
-  console.log(props.validations);
+  
 
 const[mainInput,dispatch]=useReducer(inputReducer,{
   value:'',
@@ -34,7 +34,7 @@ const { value, isValid } = mainInput;
 
 
 const onChangeHandler=(event)=>{
-  console.log(event.target.value);
+ 
   dispatch({
     type:'CHANGE',
     value:event.target.value,

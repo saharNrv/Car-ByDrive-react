@@ -45,9 +45,10 @@ const registerNewUser=(event)=>{
     username:formState.inputs.username.value,
     email:formState.inputs.email.value,
     password:formState.inputs.password.value,
+    
     userBasket:[]
   }
-  
+  console.log(newUserInfos);
 
   fetch('http://localhost:3000/users',{
     method:"POST",
@@ -57,7 +58,7 @@ const registerNewUser=(event)=>{
     body:JSON.stringify(newUserInfos)
   }).then(res=>res.json())
     .then(resualt=>{
-      console.log(resualt);
+     console.log(resualt.userID);
       authContext.login(resualt.username,resualt.id)
     })
 
@@ -146,7 +147,7 @@ const registerNewUser=(event)=>{
                       onInputHandler={onInputHandler}
                     />
                     </div>
-                    <Button type='submit' className='login-btn' onClick={registerNewUser}>login</Button>
+                    <Button type='submit' className='login-btn' onClick={registerNewUser}>register</Button>
                 </form>
                 <div className='login-info'>
                   <p>Do you have an account already? <Link to='/login' className='log-link'>login</Link></p>

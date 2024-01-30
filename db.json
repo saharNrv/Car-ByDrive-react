@@ -4,23 +4,73 @@
       "name": "sahar nouri",
       "username": "sahar_nrv",
       "email": "sahar@gmail.com",
-      "password": "12121212",
-      "id": 1
-    },
-    {
-      "name": "saeed nouri",
-      "username": "saeed_nb",
-      "email": "saeed@gmail.com",
-      "password": "123456789",
-      "id": 2
-    },
-    {
-      "name": "Ali yosefi",
-      "username": "ali_9090",
-      "email": "ali@gmail.com",
-      "password": "ali909090",
+      "password": "12345678",
       "userBasket": [],
-      "id": 3
+      "id": 1
+    }
+  ],
+  "login": [
+    {
+      "usernam": "",
+      "password": "",
+      "userID": "",
+      "id": 1
+    }
+  ],
+  "cars":[
+    {
+      "id":1,
+      "name":"Benz-Mercedes",
+      "price":12300000,
+      "gear":"Automatic",
+      "img":"/image/car-bg-1.jpeg",
+      "shortName":"mercedes",
+      "info":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, architecto.Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, architecto."
+    },
+    {
+      "id":2,
+      "name":"Hyundai",
+      "price":43500000,
+      "gear":"Automatic",
+      "img":"/image/car-1.jpeg",
+      "shortName":"hyundai",
+      "info":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, architecto.Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, architecto."
+    },
+    {
+      "id":3,
+      "name":"BMW X6",
+      "price":8900000,
+      "gear":"Manual",
+      "img":"/image/car-2.jpeg",
+      "shortName":"bmw",
+      "info":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, architecto.Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, architecto."
+    },
+    {
+      "id":4,
+      "name":"Nissan",
+      "price":67800000,
+      "gear":"Automatic",
+      "img":"/image/car-3.jpeg",
+      "shortName":"nissan",
+      "info":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, architecto.Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, architecto."
+    },
+    {
+      "id":5,
+      "name":"Ferrari",
+      "price":567000000,
+      "gear":"Automatic",
+      "img":"/image/car-4.jpeg",
+      "shortName":"ferrari",
+      "info":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, architecto.Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, architecto."
+    },
+    {
+      "id":6,
+      "name":"Honda",
+      "price":405000000,
+      "gear":"Manual",
+      "img":"/image/car-5.webp",
+      "shortName":"honda",
+      "info":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, architecto.Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, architecto."
     }
   ]
 }

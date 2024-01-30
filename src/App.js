@@ -12,7 +12,7 @@ export default function App() {
   const router=useRoutes(routers)
 
   const login=(userInfo,token)=>{
-    console.log(token,userInfo);
+   
     setToken(token)
     setIsLoggedIn(true)
     setUserInfo(userInfo)
@@ -26,19 +26,19 @@ export default function App() {
   }
   useEffect(()=>{
 
-    const localStorageData=JSON.parse(localStorage.getItem('user'))
-    
+    const localStorageData=JSON.parse(localStorage.getItem('user')).token
+    console.log(localStorageData);
+
     
     if(localStorageData){
-      fetch(`http://localhost:3000/users/${localStorageData.token}`)
+      fetch(`http://localhost:3000/users/${localStorageData}`)
       .then(res=>res.json())
         .then(resualt=>{
-          console.log(resualt);
           setIsLoggedIn(true)
           setUserInfo(resualt.username)
 
         })
-    }
+      }
 
   },[login])
 

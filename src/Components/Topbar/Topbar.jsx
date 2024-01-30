@@ -30,6 +30,7 @@ export default function Topbar() {
       
         }
       },[theme])
+      console.log(authContext.userInfo);
 
   return (
     <div className='topbar'>

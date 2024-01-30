@@ -1,7 +1,7 @@
 import Rules from "./Rules";
 
 const validator = (value, validations) => {
-    console.log(validations);
+    
 
   let validationResults = [];
 
