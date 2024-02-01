@@ -73,18 +73,5 @@
       "info": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, architecto.Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, architecto."
     }
   ],
-  "buyCar": [
-    {
-      "name": "Hyundai",
-      "price": 43500000,
-      "img": "/image/car-1.webp",
-      "id": 1
-    },
-    {
-      "name": "Honda",
-      "price": 405000000,
-      "img": "/image/car-5.webp",
-      "id": 2
-    }
-  ]
+  "buyCar": []
 }

@@ -49,3 +49,6 @@
 .car-box-btn{
     @apply text-red-600 text-2xl
 }
+.alert-box{
+    @apply bg-red-500 w-full rounded-lg p-5 font-bold text-center text-xl text-white
+}

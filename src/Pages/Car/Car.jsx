@@ -3,6 +3,8 @@ import Topbar from '../../Components/Topbar/Topbar';
 import Footer from '../../Components/Footer/Footer';
 import './car.css'
 import { useParams } from 'react-router-dom';
+// import swal from 'sweetalert';
+
 
 export default function Car() {
 
@@ -22,7 +24,7 @@ export default function Car() {
           })
           setCarSpecs(carInfos)
         })
-        
+       
   },[])
   
 
