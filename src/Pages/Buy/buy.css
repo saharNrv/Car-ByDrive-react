@@ -1,0 +1,51 @@
+.buy{
+    height: 100vh;
+    padding-top: 80px;
+}
+
+.buy-title{
+    @apply font-bold text-4xl p-5 dark:text-white tracking-widest
+}
+.table{
+  width: 100%;
+    
+}
+.table thead{
+    border-bottom: 2px solid #ccc;
+    background-color: #f0f0f0f0;
+}
+.table tr{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+   
+}
+.tr-thead{
+    padding: 12px 10px 12px 20px;
+  
+   
+
+}
+.tr-tbody{
+    padding: 20px 30px 20px 10px;
+}
+.table img{
+    width: 120px;
+}
+
+.buys-box{
+    display: none;
+}
+
+.buy-box{
+    @apply flex flex-col my-2 bg-zinc-100 dark:bg-slate-900 dark:shadow-3xl dark:text-white p-4 rounded-lg
+}
+.car-box-img{
+    @apply rounded-lg
+}
+.car-box-title{
+    @apply  my-4 font-bold text-xl text-left
+}
+.car-box-btn{
+    @apply text-red-600 text-2xl
+}
