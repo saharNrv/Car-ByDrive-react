@@ -27,7 +27,7 @@ export default function App() {
   useEffect(()=>{
 
     const localStorageData=JSON.parse(localStorage.getItem('user')).token
-    console.log(localStorageData);
+   
 
     
     if(localStorageData){

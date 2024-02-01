@@ -1,10 +1,18 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Topbar from '../../Components/Topbar/Topbar';
 import Footer from '../../Components/Footer/Footer';
 import { MdDelete } from "react-icons/md";
 import './buy.css'
 
 export default function Buy() {
+
+    const[buyCar,setBuyCar]=useState([])
+    useEffect(()=>{
+        fetch('http://localhost:3000/buyCar')
+             .then(res=>res.json())
+             .then(data=>setBuyCar(data))
+    },[])
+
   return (
     <div>
         <Topbar/>
@@ -22,30 +30,24 @@ export default function Buy() {
                             </tr>
                         </thead>
                         <tbody>
-                            <tr className='tr-tbody'>
+                            {
+                                buyCar.map(info=>(
+                            <tr className='tr-tbody' key={info.id}>
                                 <td>
-                                    <img src="/image/car-1.webp" alt="" />
+                                    <img src={info.img} alt="" />
                                 </td>
-                                <td>mercedes-bnz</td>
-                                <td>12000000$</td>
-                                <td>
-                                    <span>
-                                        <MdDelete className='text-red-500 text-2xl'/>
-                                    </span>
-                                </td>
-                            </tr>
-                            <tr className='tr-tbody'>
-                                <td>
-                                    <img src="/image/car-1.webp" alt="" />
-                                </td>
-                                <td>mercedes-bnz</td>
-                                <td>12000000$</td>
+                                <td>{info.name}</td>
+                                <td>${info.price.toLocaleString()}</td>
                                 <td>
                                     <span>
                                         <MdDelete className='text-red-500 text-2xl'/>
                                     </span>
                                 </td>
                             </tr>
+
+                                ))
+                            }
+                          
                         </tbody>
                     </table>
                     {/* responsive cart */}
@@ -53,28 +55,23 @@ export default function Buy() {
                         <div className="container-grid">
 
                         <div className="row-grid">
-                            <div className="col-12">
+                            {
+                                buyCar.map(info=>(
+                            <div className="col-12" key={info.id}>
                                 <div className='buy-box'>
-                                    <img src="/image/car-2.jpeg" alt="car image" className='car-box-img' />
-                                    <h2 className='car-box-title'>BMW-X6</h2>
+                                    <img src={info.img} alt="car image" className='car-box-img' />
+                                    <h2 className='car-box-title'>{info.name}</h2>
                                     <div className='w-full flex items-center justify-between'>
-                                    <span>100000$</span>
+                                    <span>${info.price.toLocaleString()}</span>
                                     <button className='car-box-btn'><MdDelete/></button>
 
                                     </div>
                                 </div>
                             </div>
-                            <div className="col-12">
-                                <div className='buy-box'>
-                                    <img src="/image/car-2.jpeg" alt="car image" className='car-box-img' />
-                                    <h2 className='car-box-title'>BMW-X6</h2>
-                                    <div className='w-full flex items-center justify-between'>
-                                    <span>100000$</span>
-                                    <button className='car-box-btn'><MdDelete/></button>
 
-                                    </div>
-                                </div>
-                            </div>
+                                ))
+                            }
+                           
                         </div>
                         </div>
 

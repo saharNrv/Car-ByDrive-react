@@ -7,21 +7,45 @@ import { useParams } from 'react-router-dom';
 export default function Car() {
 
   const {shortName}=useParams()
-  console.log(shortName);
+  
   const[carSpecs,setCarSpecs]=useState([])
+  
   
   useEffect(()=>{
 
     fetch(`http://localhost:3000/cars`)
          .then(res=>res.json())
          .then(data=>{
-          console.log(data);
+          
          let carInfos= data.find(pro=>{
             return pro.shortName===shortName
           })
           setCarSpecs(carInfos)
         })
+        
   },[])
+  
+
+  const onClickHandler=()=>{
+    console.log('click');
+    const newCarInfoBuy={
+      name:carSpecs.name,
+      price:carSpecs.price,
+      img:carSpecs.img
+
+    }
+
+    fetch(`http://localhost:3000/buyCar`,{
+      method:'POST',
+      headers:{
+        'Content-Type':'application/json'
+      },
+      body:JSON.stringify(newCarInfoBuy)
+    }).then(res=>res.json())
+      .then(data=>console.log(data)) 
+       
+
+  }
 
   return (
     <div>
@@ -38,7 +62,7 @@ export default function Car() {
                         <p className='car-info-text'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, adipisci! Dicta quos, sunt non architecto voluptates enim odio sequi tempora atque libero quas harum eligendi ad. Non ipsum provident iste.</p>
                         <div className='car-pb'>
                             <p className='car-price'>${carSpecs.price}</p>
-                            <button className='car-btn'>Add To Cart</button>
+                            <button className='car-btn' onClick={onClickHandler}>Add To Cart</button>
                         </div>
                     </div>
                 </div>

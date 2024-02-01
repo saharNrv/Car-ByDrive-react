@@ -58,6 +58,9 @@
   .header-searchBox {
     width: 380px;
   }
+  .buy{
+    height: 100%;
+  }
 }
 @media screen and (max-width: 468px) {
   .headet-title {
