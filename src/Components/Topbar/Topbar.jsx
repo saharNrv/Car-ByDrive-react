@@ -3,6 +3,7 @@ import useDarkTheme from '../../Hooks/useDarkTheme';
 import { MdOutlineLightMode } from "react-icons/md";
 import { MdOutlineDarkMode } from "react-icons/md";
 import AutContext from '../../context/AuthContext';
+import { FaShoppingCart } from "react-icons/fa";
 
 import './Topbar.css'
 import { Link } from 'react-router-dom';
@@ -13,6 +14,7 @@ export default function Topbar() {
     const[theme,toggleTheme]=useDarkTheme()
     const menuRef=useRef()
     const[isShowCloseBtn,setIsShowCloseBtn]=useState(false)
+    const[cartCount,setCartCount]=useState(0)
 
     const authContext=useContext(AutContext)
 
@@ -29,6 +31,10 @@ export default function Topbar() {
           document.body.classList.remove('dark')
       
         }
+
+        fetch('http://localhost:3000/buyCar')
+             .then(res=>res.json())
+             .then(data=>setCartCount(data))
       },[theme])
      
 
@@ -45,6 +51,12 @@ export default function Topbar() {
             <li>All Cars</li>
             <li>Contact Us</li>
             <li>Reviews</li>
+            <li className='cart-box'>
+              <Link to='/carBuy'>
+              <FaShoppingCart/>
+              <span className='cart-num'>{cartCount.length}</span>
+              </Link>
+            </li>
             <li className='md:hidden block'><a href="#" className='create-acount'>login/sign in</a></li>
         </ul>
 

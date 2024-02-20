@@ -34,9 +34,9 @@ export default function Buy() {
     <div>
         <Topbar/>
         <div className='buy'>
-            <h1 className='buy-title'>Cart</h1>
             <div className="buy-wrapper">
                 <div className="container-grid">
+            <h1 className='buy-title'>Cart</h1>
                     {
                         buyCar.length!==0?(
                             <table className='table'>
@@ -70,7 +70,7 @@ export default function Buy() {
                             </tbody>
                         </table>
                         ):(
-                            <div className='alert-box'>No Product</div>
+                            <div className='alert-box-desc'>No Product</div>
                         )
                     }
                    

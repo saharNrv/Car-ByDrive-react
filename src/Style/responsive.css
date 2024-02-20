@@ -61,6 +61,9 @@
   .buy{
     height: 100%;
   }
+  .alert-box-desc{
+    display: none;
+  }
 }
 @media screen and (max-width: 468px) {
   .headet-title {
