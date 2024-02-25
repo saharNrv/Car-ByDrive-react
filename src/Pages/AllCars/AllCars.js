@@ -8,8 +8,12 @@ import CarBox from '../../Components/CarBox/CarBox';
 
 import './allcars.css'
 export default function AllCars() {
-
+ 
   const [allCars, setAllCars] = useState([])
+  const [orderAllCars, setOrderAllCars] = useState([])
+  const [changeCarType, setChangeCarType] = useState('row')
+  const [searchVal,setSearchVal]=useState('')
+
 
   useEffect(() => {
     fetch('http://localhost:3000/allcars')
@@ -17,8 +21,16 @@ export default function AllCars() {
       .then(data => {
         console.log(data);
         setAllCars(data)
+        setOrderAllCars(data)
       })
   }, [])
+
+  const changeHandler=(e)=>{
+    setSearchVal(e.target.value)
+    const filteredCars=allCars.filter(car=>car.name.toLowerCase().includes(e.target.value.toLowerCase()))
+    setOrderAllCars(filteredCars)
+
+  }
 
   return (
     <>
@@ -30,43 +42,66 @@ export default function AllCars() {
           <div className="menuBar">
             <div className='menuBar-right'>
               <div className='search-box'>
-                <input type="text" placeholder='search here...' />
+                <input 
+                type="text"
+                 placeholder='search here...' 
+                 value={searchVal}
+                 onChange={changeHandler}
+                 />
                 <FaSearch className='search-icon' />
               </div>
             </div>
             <div className='menuBar-left'>
-              <span className='typeClass'>
+              <div className={`typeClass ${changeCarType==='row'?'active':''} `} onClick={()=>setChangeCarType('row')}>
                 <PiTextColumnsBold />
-              </span>
-              <span className=' typeClass active'>
+              </div>
+              <div className={`typeClass ${changeCarType==='cloumn'?'active':''} `} onClick={()=>setChangeCarType('cloumn')}>
                 <PiRowsBold />
-              </span>
+              </div>
             </div>
           </div>
           {/* courses */}
+          {
+            changeCarType==='row'?(
+              <>
           <div className="row-grid">
             {
-              allCars.map(car => (
+              orderAllCars.map(car => (
 
 
                 <CarBox {...car} />
               ))
             }
           </div>
+              </>
+
+            ):(
+              <>
+               {
+              orderAllCars.map(car => (
+
 
           <div className="cloumn-car">
             <div className='cloumn'>
-              <img src="/image/b-car-1.jpeg" alt="car" />
+              <img src={car.img} alt="car" />
               <div className='info-box'>
+                <h2>{car.name}</h2>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, eaque!
+                 {car.info}
               </p>
-              <span>15400000</span>
+              <span>{car.price}</span>
 
               </div>
               <button>see more</button>
             </div>
           </div>
+                
+              ))
+            }
+              </>
+            )
+          }
+
 
         </div>
 
