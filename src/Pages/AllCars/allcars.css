@@ -27,7 +27,7 @@
   color: #fff;
 }
 .cloumn-car {
-  @apply bg-blue-500;
+  @apply bg-gray-200 dark:bg-slate-900 dark:shadow-3xl relative dark:text-white shadow p-3 rounded-lg;
 }
 .cloumn {
   @apply flex items-center;
@@ -37,4 +37,10 @@
 }
 .info-box {
   @apply ml-2;
+}
+.info-box p {
+  @apply mb-2;
+}
+.cloumn button {
+  @apply absolute right-10 bg-gray-300 py-2 px-5 rounded-md cursor-pointer hover:bg-gray-400 dark:text-white dark:bg-gray-600;
 }
