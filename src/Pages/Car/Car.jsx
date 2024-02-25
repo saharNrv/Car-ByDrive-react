@@ -12,6 +12,9 @@ export default function Car() {
   
   const[carSpecs,setCarSpecs]=useState([])
   
+
+  
+  
   
   useEffect(()=>{
 
@@ -29,13 +32,15 @@ export default function Car() {
   
 
   const onClickHandler=()=>{
-    console.log('click');
+    
+   
     const newCarInfoBuy={
       name:carSpecs.name,
       price:carSpecs.price,
       img:carSpecs.img
 
     }
+   
 
     fetch(`http://localhost:3000/buyCar`,{
       method:'POST',
@@ -44,8 +49,14 @@ export default function Car() {
       },
       body:JSON.stringify(newCarInfoBuy)
     }).then(res=>res.json())
-      .then(data=>console.log(data)) 
+      .then(data=>{
+        console.log(data)
        
+
+        
+      }) 
+
+    
 
   }
 

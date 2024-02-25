@@ -25,12 +25,14 @@ export default function App() {
     localStorage.removeItem("user");
   }
   useEffect(()=>{
+    const isToken=localStorage.getItem('user');
+    if(isToken){
 
     const localStorageData=JSON.parse(localStorage.getItem('user')).token
    
 
     
-    if(localStorageData){
+    // if(localStorageData){
       fetch(`http://localhost:3000/users/${localStorageData}`)
       .then(res=>res.json())
         .then(resualt=>{
@@ -38,8 +40,8 @@ export default function App() {
           setUserInfo(resualt.username)
 
         })
-      }
-
+      // }
+    }
   },[login])
 
   return (

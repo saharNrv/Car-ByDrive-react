@@ -20,7 +20,6 @@ export default function Buy() {
 
     const deleteHandler=(info)=>{
         
-
         console.log(info.id);
         fetch(`http://localhost:3000/buyCar/${info.id}`,{
             method:'DELETE'
@@ -28,6 +27,7 @@ export default function Buy() {
           .then(data=>{
             getAllCar()
           })
+         
     }
 
   return (

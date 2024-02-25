@@ -1,3 +1,4 @@
+import AllCars from "./Pages/AllCars/AllCars"
 import Buy from "./Pages/Buy/Buy"
 import Car from "./Pages/Car/Car"
 import Home from "./Pages/Home/Home"
@@ -10,6 +11,8 @@ const routers=[
     {path:'/carBuy',element:<Buy/>},
     {path:'/login',element:<Login/>},
     {path:'/register',element:<Register/>},
+    {path:'/register',element:<Register/>},
+    {path:'/allcars',element:<AllCars/>},
 
 ]
 

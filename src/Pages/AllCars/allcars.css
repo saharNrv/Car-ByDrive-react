@@ -1,0 +1,40 @@
+.allcars {
+  @apply pb-10 pt-[100px] bg-gray-100 dark:bg-slate-900;
+}
+.menuBar {
+  @apply flex items-center justify-between bg-gray-300 dark:bg-gray-500 py-2 px-8 my-10 rounded-lg;
+}
+.menuBar-right {
+  @apply w-[300px];
+}
+.search-box {
+  @apply w-full relative;
+}
+.search-box input {
+  @apply w-full p-3 rounded-lg shadow shadow-gray-600 outline-none;
+}
+.search-icon {
+  @apply absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 cursor-pointer;
+}
+.menuBar-left {
+  @apply w-[300px] md:flex hidden items-center justify-end;
+}
+.typeClass {
+  @apply w-10 h-10 bg-white rounded-sm shadow text-2xl flex items-center justify-center ml-2 cursor-pointer;
+}
+.active {
+  background-color: rgba(0, 42, 255, 0.706);
+  color: #fff;
+}
+.cloumn-car {
+  @apply bg-blue-500;
+}
+.cloumn {
+  @apply flex items-center;
+}
+.cloumn img {
+  @apply w-[300px];
+}
+.info-box {
+  @apply ml-2;
+}

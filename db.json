@@ -75,16 +75,84 @@
   ],
   "buyCar": [
     {
+      "name": "Benz-Mercedes",
+      "price": 12300000,
+      "img": "/image/car-bg-1.jpeg",
+      "id": 1
+    },
+    {
+      "name": "Hyundai",
+      "price": 43500000,
+      "img": "/image/car-1.webp",
+      "id": 2
+    },
+    {
       "name": "Ferrari",
       "price": 567000000,
       "img": "/image/car-4.jpeg",
-      "id": 1
+      "id": 3
     },
     {
       "name": "Nissan",
       "price": 67800000,
       "img": "/image/car-3.jpeg",
-      "id": 2
+      "id": 5
+    }
+  ],
+  "allcars":[
+    {
+      "id":1,
+      "name":"mercedes",
+      "price":12300000,
+      "gear":"Automatic",
+      "img":"/image/blue-car-1.jpeg",
+      "shortName":"mercedes",
+      "info":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, architecto.Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, architecto."
+    },
+    {
+      "id":2,
+      "name":"BMW X5",
+      "price":340009900,
+      "gear":"Automatic",
+      "img":"/image/blue-car-2.jpeg",
+      "shortName":"bmw5",
+      "info":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, architecto.Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, architecto."
+    },
+    {
+      "id":3,
+      "name":"pride",
+      "price":89000000,
+      "gear":"Automatic",
+      "img":"/image/red-car-1.jpeg",
+      "shortName":"pride",
+      "info":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, architecto.Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, architecto."
+    },
+    {
+      "id":4,
+      "name":"Kia",
+      "price":12300000,
+      "gear":"Automatic",
+      "img":"/image/red-car-2.jpeg",
+      "shortName":"kia",
+      "info":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, architecto.Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, architecto."
+    },
+    {
+      "id":5,
+      "name":"Samand",
+      "price":66000000,
+      "gear":"Automatic",
+      "img":"/image/red-car-3.jpeg",
+      "shortName":"samand",
+      "info":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, architecto.Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, architecto."
+    },
+    {
+      "id":1,
+      "name":"Peugeot",
+      "price":450000000,
+      "gear":"Automatic",
+      "img":"/image/blue-car-1.jpeg",
+      "shortName":"peugeot",
+      "info":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, architecto.Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, architecto."
     }
   ]
 }

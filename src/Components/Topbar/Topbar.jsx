@@ -47,9 +47,15 @@ export default function Topbar() {
       </div>
       <div className="topbar-right  " ref={menuRef}>
         <ul className='topbar-list'>
-            <li>Home</li>
-            <li>All Cars</li>
-            <li>Contact Us</li>
+            <li>
+              <Link to='/'>Home</Link>
+            </li>
+            <li>
+              <Link to='/allcars'>All Cars</Link>
+            </li>
+            <li>
+              <Link to='/register'>Contact Us</Link>
+            </li>
             <li>Reviews</li>
             <li className='cart-box'>
               <Link to='/carBuy'>
