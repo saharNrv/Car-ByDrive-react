@@ -17,7 +17,7 @@
   @apply absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 cursor-pointer;
 }
 .menuBar-left {
-  @apply w-[300px] md:flex hidden items-center justify-end;
+  @apply w-[300px] md:flex hidden items-center relative justify-start flex-row-reverse;
 }
 .typeClass {
   @apply w-10 h-10 bg-white rounded-sm shadow text-2xl flex items-center justify-center ml-2 cursor-pointer;
@@ -46,4 +46,53 @@
 }
 .cloumn button {
   @apply absolute right-10 bottom-4 bg-gray-300 py-2 px-5 rounded-md cursor-pointer hover:bg-gray-400 dark:text-white dark:bg-gray-600;
+}
+.courses-top-bar__selection {
+  cursor: pointer;
+  position: relative;
+}
+.allcars-top-bar__selection-list {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  right: 100px;
+  width: 100%;
+  padding: 0.8rem 0;
+  border-radius: 0 0 0.3rem 0.3rem;
+  border-bottom: 0.3rem solid var(--primary-color);
+  z-index: 9999;
+  transition: all 400ms ease;
+}
+.allcars-title{
+  display: flex;
+    align-items: center;
+    height: 2.5rem;
+    border-radius: 0.3rem;
+    padding:0px 20px ;
+    border: 1px solid #e5e5e5;
+    color: #7d7e7f;
+    transition: all 400ms ease;
+    background-color: #fff;
+    cursor: pointer;
+}
+.allcars-top-bar__selection-item {
+  color: #5f5f5f;
+  font-size: 1.4rem;
+  padding: 0.9rem 1.4rem;
+  transition: all 200ms ease;
+}
+
+.allcars-top-bar__selection-item:hover {
+  background-color: #ddd;
+}
+
+.allcars-top-bar__selection-item--active {
+  background-color: #ddd !important;
+}
+
+.allcars-top-bar__selection:hover .allcars-top-bar__selection-list {
+  visibility: visible;
+  opacity: 1;
 }

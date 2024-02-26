@@ -102,6 +102,7 @@
   "allcars":[
     {
       "id":1,
+      "color":"blue",
       "name":"mercedes",
       "price":12300000,
       "gear":"Automatic",
@@ -112,6 +113,7 @@
     {
       "id":2,
       "name":"BMW X5",
+      "color":"blue",
       "price":340009900,
       "gear":"Automatic",
       "img":"/image/blue-car-2.jpeg",
@@ -121,6 +123,7 @@
     {
       "id":3,
       "name":"pride",
+      "color":"red",
       "price":89000000,
       "gear":"Automatic",
       "img":"/image/red-car-1.jpeg",
@@ -130,6 +133,7 @@
     {
       "id":4,
       "name":"Kia",
+      "color":"red",
       "price":12300000,
       "gear":"Automatic",
       "img":"/image/red-car-2.jpeg",
@@ -139,6 +143,7 @@
     {
       "id":5,
       "name":"Samand",
+      "color":"red",
       "price":66000000,
       "gear":"Automatic",
       "img":"/image/red-car-3.jpeg",
@@ -146,11 +151,12 @@
       "info":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, architecto.Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, architecto."
     },
     {
-      "id":1,
+      "id":6,
       "name":"Peugeot",
+      "color":"black",
       "price":450000000,
       "gear":"Automatic",
-      "img":"/image/blue-car-1.jpeg",
+      "img":"/image/b-car-1.jpeg",
       "shortName":"peugeot",
       "info":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, architecto.Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, architecto."
     }
